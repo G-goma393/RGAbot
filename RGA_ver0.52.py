@@ -32,7 +32,7 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(new_activity)) 
     await tree.sync()
   
-# スラッシュコマンドの実装
+# スラッシュコマンドの実装、nameに入れた文字列がスラッシュコマンド名になる
 @tree.command(name='hello', description='Display profile based on gameName and tagLine') 
 async def test(interaction: discord.Interaction, gn:str, tl:int):
     # gnにはgameNameをtlにはtagLineを引数として受け取る
